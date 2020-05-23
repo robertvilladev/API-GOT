@@ -9,7 +9,7 @@ const cors = require('cors')
 dotenv.config()
 
 // Conectando DB
-require('./config/db')
+require('./config/db/index')
 
 // Middlewares y PORT
 // eslint-disable-next-line no-undef
@@ -30,7 +30,6 @@ app.use((err, req, res, next) => {
   res
     .status(500)
     .send('Something broke!')
-    .catch(next)
 })
 
 app.listen(app.get('port'), () => {

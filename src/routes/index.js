@@ -1,7 +1,9 @@
 const router = require('express').Router()
 
-router.use('/', (req, res) => {
-  res.send('API is workking')
-})
+// Importando rutas
+const Test = require('./test')
+
+router.use('/search', Test)
+router.use('/', (req, res) => res.send('API is workking'))
 
 module.exports = router
