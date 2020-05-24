@@ -52,8 +52,6 @@ const CharacterSchema = new Schema({
     type: Array,
     default: []
   }
-
-
 })
 
 module.exports = model('character', CharacterSchema)
